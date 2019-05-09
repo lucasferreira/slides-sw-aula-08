@@ -1,0 +1,116 @@
+body {
+  font-family: "Open Sans";
+  color: #333;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Anton";
+  font-weight: normal;
+  color: #003958;
+}
+
+h2 {
+  padding-bottom: 0;
+  margin-top: 15px;
+  margin-bottom: 21px;
+}
+
+h3 {
+  padding-bottom: 0;
+  margin-top: 7px;
+  margin-bottom: 15px;
+}
+
+.remark-slide-number {
+  color: #fff;
+}
+
+.remark-slide-content {
+  background: #fff url(../img/bg.jpg) no-repeat bottom right;
+  background-size: 150% 110%;
+  font-size: 18px;
+}
+
+.remark-slide-content table,
+.remark-slide-content table th,
+.remark-slide-content table td {
+  border: 1px solid #ddd;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.remark-slide-content table th,
+.remark-slide-content table td {
+  text-align: left;
+  padding: 3px 6px;
+  font-size: 15px;
+}
+
+.remark-code,
+.remark-inline-code {
+  font-family: "Ubuntu Mono";
+}
+.remark-inline-code {
+  background-color: #efefef;
+}
+
+.remark-code {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+img,
+objetc,
+video,
+iframe,
+audio,
+picture {
+  max-width: 100%;
+}
+
+#slide-capa {
+  background: #fff url(../img/bg_capa.jpg) no-repeat top center;
+  background-size: 150% 100%;
+}
+
+#slide-capa .capa-titulo {
+  position: absolute;
+  top: 41%;
+  right: 9%;
+}
+
+#slide-capa .capa-subtitulo {
+  position: absolute;
+  right: 4%;
+  bottom: 6%;
+}
+
+#slide-capa .remark-slide-number {
+  display: none;
+}
+
+.doc-img {
+  display: inline-block;
+  width: 675px;
+  margin-top: 16px;
+}
+.doc-img img {
+  width: 100%;
+}
+
+.php-img {
+  display: inline-block;
+  width: 260px;
+}
+.php-img img {
+  width: 100%;
+}
+
+.gif-img {
+  display: inline-block;
+  width: 520px;
+}
+.gif-img img {
+  width: 100%;
+}
