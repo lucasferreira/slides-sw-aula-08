@@ -113,7 +113,7 @@ echo "$Nome e $nome";
 
 --
 
-Toda linha declarativa ou evaluativa deve ser **obrigatoriamente** terminada com ponto-e-virgula _(;)_
+Toda linha declarativa ou evaluativa deve ser **obrigatoriamente** terminada com ponto-e-vírgula _(;)_
 
 --
 
@@ -150,7 +150,7 @@ Cada constante só pode ser definida uma vez ao longo de toda execução do scri
 
 --
 
-Para análisar melhor uma variável já declarada utilize a função `var_dump`
+Para analisar melhor uma variável já declarada utilize a função `var_dump`
 
 ---
 
@@ -217,7 +217,7 @@ $idades = array(21, 23, 25, 24);
 
 --
 
-O acesso a estes valores se dá por meio de sua posição-índice, começando zempre em _zero_:
+O acesso a estes valores se dá por meio de sua posição-índice, começando sempre em _zero_:
 
 ```php
 <?php
@@ -416,7 +416,7 @@ Podemos usar `extends`, `interface`, `implements`, variáveis e métodos `static
 
 --
 
-A auto-referencia de uma classe já instanciada fica no elemento `$this`, sendo que métodos estáticos podem ficar acessíveis com `self` ou o nome da própria classe.
+A auto referência de uma classe já instanciada fica no elemento `$this`, sendo que métodos estáticos podem ficar acessíveis com `self` ou o nome da própria classe.
 
 ---
 
@@ -462,7 +462,7 @@ Você pode separar a lógica de sua aplicação em diversos arquivos e importá-
 
 --
 
-- `require_once` => inclui um arquivo de forma obrigatória e única, o mesmo arquivo não poderá ser incluido mais de uma vez ao longo da mesma execuçào, interrompe a execução se o arquivo não for encontrado
+- `require_once` => inclui um arquivo de forma obrigatória e única, o mesmo arquivo não poderá ser incluido mais de uma vez ao longo da mesma execução, interrompe a execução se o arquivo não for encontrado
 
 ---
 
@@ -477,7 +477,7 @@ As extensões mais utilizadas do PHP são:
 - `PDO` - Banco de dados diversos de forma escalável
 - `APC` - Cache de aplicação
 - Suporte individual a bancos diversos
-- `GD2` - Manipuação de Imagens
+- `GD2` - Manipulação de Imagens
 - `SOAP` - Webservices em SOAP
 - `XML` - Manipulação de XML
 
@@ -623,7 +623,7 @@ foreach($rows as $row) {
 
 Ao longo dos anos e suas versões o PHP vêm evoluindo constantemente, principalmente buscando aumentar sua performance, seu conjunto de ferramentas e continuar sendo relevante no mercado profissional de desenvolvimento web.
 
-Algumas funcionalidades agregaram em muito para que o PHP não perdesse seu espaço no mercado, funcionalidades que vieram a sugir a partir da **versão 5.3** do PHP em diante:
+Algumas funcionalidades agregaram em muito para que o PHP não perdesse seu espaço no mercado, funcionalidades que vieram a surgir a partir da **versão 5.3** do PHP em diante:
 
 - `autoload`
 - `namespace`
