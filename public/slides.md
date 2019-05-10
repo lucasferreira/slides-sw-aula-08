@@ -146,7 +146,7 @@ echo STATUS_APROVADO;
 ?>
 ```
 
-Cada constante só pode ser definida uma vez ao longo de toda execução do script, não pode ser sobreescrevida e não deve ser iniciada com cifrão _(`$`)_
+Cada constante só pode ser definida uma vez ao longo de toda execução do script, não pode ser sobrescrita e não deve ser iniciada com cifrão _(`$`)_
 
 --
 
