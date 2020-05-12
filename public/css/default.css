@@ -1,12 +1,12 @@
 body {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   color: #333;
 }
 
 h1,
 h2,
 h3 {
-  font-family: "Anton";
+  font-family: "Anton", sans-serif;
   font-weight: normal;
   color: #003958;
 }
@@ -49,7 +49,7 @@ h3 {
 
 .remark-code,
 .remark-inline-code {
-  font-family: "Ubuntu Mono";
+  font-family: "Ubuntu Mono", sans-serif;
 }
 .remark-inline-code {
   background-color: #efefef;

@@ -528,7 +528,7 @@ Podemos então resgatar alguns dados da tabela `alunos`:
 $query = mysql_query("SELECT * FROM alunos", $conexao);
 
 if (!$query) {
-  echo 'Invalid query: ' . mysql_error() . "\n";
+  echo 'Invalid query: ' . mysqli_error() . "\n";
   exit;
 }
 
