@@ -104,8 +104,8 @@ Primeiro ponto a ser destacado é que PHP _(assim como JavaScript)_ é case-sens
 ```php
 <?php
 // abaixo temos duas variáveis distintas
-$Nome = "Wesley";
-$nome = "Vladson";
+$Nome = "Wédley";
+$nome = "Clairton";
 
 echo "$Nome e $nome";
 ?>
@@ -129,7 +129,7 @@ As variáveis em PHP basicamente são declaradas assim:
 <?php
 $nome = "Lucas";
 $sobrenome = "Ferreira";
-$idade = 32;
+$idade = 33;
 $linguagens = array("JavaScript", "PHP");
 ?>
 ```
@@ -237,7 +237,7 @@ Outra característica na flexibilidade do uso de arrays em PHP são os chamados 
 <?php
 $usuario = array(
   "nome" => "Lucas",
-  "idade" => 32,
+  "idade" => 33,
   "email" => "lucas.ferreira@satc.edu.br",
   "linguagens" => array("JavaScript", "PHP", "HTML", "CSS")
 );
