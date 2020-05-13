@@ -525,15 +525,15 @@ if(!$conexao) {
 Podemos então resgatar alguns dados da tabela `alunos`:
 
 ```php
-$query = mysql_query("SELECT * FROM alunos", $conexao);
+$query = mysqli_query($conexao, "SELECT * FROM alunos", $conexao);
 
 if (!$query) {
-  echo 'Invalid query: ' . mysqli_error() . "\n";
+  echo 'Invalid query: ' . mysqli_error($conexao) . "\n";
   exit;
 }
 
 // se chegarmos até aqui é sucesso!
-while ($row = mysql_fetch_assoc($query)) {
+while ($row = mysqli_fetch_assoc($query)) {
     echo $row['nome'] . "<br />";
 }
 ```
