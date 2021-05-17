@@ -33,7 +33,7 @@ count: false
 
 - Não deveria rodar diretamente no navegador do usuário (isso é o Frontend)
 
-- Linguagens comuns de backend: Java, PHP, ASP.NET, C#, Python, Go, Ruby, Node.JS, Elixir e etc
+- Linguagens comuns de backend: Java, PHP, ASP.NET, C#.NET, Python, Go, Ruby, Node.JS, Elixir e etc
 
 ---
 
@@ -130,7 +130,7 @@ As variáveis em PHP basicamente são declaradas assim:
 $nome = "Lucas";
 $sobrenome = "Ferreira";
 $idade = 33;
-$linguagens = array("JavaScript", "PHP");
+$linguagens = array("JavaScript", "PHP"); // ou ["JavaScript", "PHP"];
 ?>
 ```
 
