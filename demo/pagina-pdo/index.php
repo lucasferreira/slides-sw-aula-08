@@ -14,14 +14,15 @@
     <ul>
       <?php
       // se chegarmos até aqui é sucesso!
-      $query = mysqli_query($conexao, "SELECT * FROM cursos ORDER BY name ASC");
-
-      if (!$query) {
-        echo 'Invalid query: ' . mysqli_error($conexao) . "\n";
+      try {
+        $query = $conexao->query("SELECT * FROM cursos ORDER BY name ASC");
+      } catch (PDOException $err) {
+        echo 'Erro na query: ' . $err->getMessage();
         exit;
       }
+      $rows = $query->fetchAll(PDO::FETCH_ASSOC);
 
-      while ($row = mysqli_fetch_assoc($query)) {
+      foreach($rows as $row) {
         echo "<li>" . $row["name"] . " | <a href='excluir_curso.php?id=" . $row["id"] . "'>Excluir</a></li>";
       }
       ?>

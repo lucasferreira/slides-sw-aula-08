@@ -525,7 +525,7 @@ if(!$conexao) {
 Podemos então resgatar alguns dados da tabela `alunos`:
 
 ```php
-$query = mysqli_query($conexao, "SELECT * FROM alunos", $conexao);
+$query = mysqli_query($conexao, "SELECT * FROM alunos");
 
 if (!$query) {
   echo 'Invalid query: ' . mysqli_error($conexao) . "\n";
