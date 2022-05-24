@@ -3,46 +3,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Homepage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bem-vindo - HOME</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
-  <?php require_once("header.php"); ?>
-  <h1>Bem-vindo</h1>
+  <?php require_once("menu.php"); ?>
+  <main style="padding: 21px;">
+    <p><strong>Lista de Cursos:</strong></p>
+    <ul>
+      <?php
+      // se chegarmos até aqui é sucesso!
+      $query = mysqli_query($conexao, "SELECT * FROM cursos ORDER BY name ASC");
 
-  <h3>Lista de Cursos:</h3>
-  <?php
-  if (!empty($_POST['name']))
-  {
-    $queryInsert = "INSERT INTO cursos(name, created_at, updated_at) VALUE('" . $_POST['name'] . "', NOW(), NOW())";
-    $q = mysqli_query($conexao, $queryInsert);
-    if (!$q) {
-      echo 'Invalid query: ' . mysqli_error($conexao) . "\n";
-      exit;
-    }
-  }
+      if (!$query) {
+        echo 'Invalid query: ' . mysqli_error($conexao) . "\n";
+        exit;
+      }
 
-  $query = mysqli_query($conexao, "SELECT * FROM cursos ORDER BY name ASC");
+      while ($row = mysqli_fetch_assoc($query)) {
+        echo "<li>" . $row["name"] . " | <a href='excluir_curso.php?id=" . $row["id"] . "'>Excluir</a></li>";
+      }
+      ?>
+    </ul>
 
-  if (!$query) {
-    echo 'Invalid query: ' . mysqli_error($conexao) . "\n";
-    exit;
-  }
-  ?>
-  <ul>
-    <?php while($row = mysqli_fetch_assoc($query)) { ?>
-    <li>Curso: <?php echo $row['name']; ?></li>
-    <?php } ?>
-  </ul>
-
-  <h3>Novo Curso:</h3>
-  <form action="index.php" method="post">
-    <div class="form-group">
-      <label for="name">Nome do Curso</label>
-      <input name="name" type="text" value="" />
-    </div>
-    <button>Salvar curso</button>
-  </form>
-  <?php include("footer.php"); ?>
+    <br />
+    <form action="cadastrar_curso.php" method="post">
+      <fieldset>
+        <div class="form-group">
+          <label for="nomeCurso">Nome do Curso:</label>
+          <input type="text" id="nomeCurso" name="name" class="form-control" />
+        </div>
+        <button class="btn btn-primary btn-lg">Cadastrar Curso</button>
+      </fieldset>
+    </form>
+  </main>
+  <br />
+  <?php require_once("rodape.php") ?>
 </body>
 </html>
-<?php mysqli_close($conexao); ?>

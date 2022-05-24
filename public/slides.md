@@ -49,7 +49,7 @@ count: false
 
 - Caracterizada com uma linguagem extremamente modularizada, possui ampla aceitação em diversas plataformas e sistemas operacionais
 
-- Atualmente na versão **7.x** com suporte estável também na versão **5.6.x**
+- Atualmente na versão **8.x** com suporte estável também nas versões **7.x** e correções de segurança na **5.6.x**
 
 ---
 
@@ -497,7 +497,7 @@ Cada banco de dados que esteja devidamente configurado no PHP (mediante a ativa�
 
 No caso do MySQL clássico são identificadas como `mysql_*` desde versões pré-históricas da linguagem.
 
-Na versão 5.x do PHP essa extensão de conexão com MySQL fora reescrita e chamada de **MySQLi**. Possuindo todos os mesmos métodos e funcionalidades da finada `mysql_*` as funções `mysqli_*` são as únicas suportadas no PHP 7.x.
+Na versão 5.x do PHP essa extensão de conexão com MySQL fora reescrita e chamada de **MySQLi**. Possuindo todos os mesmos métodos e funcionalidades da finada `mysql_*` as funções `mysqli_*` são as únicas suportadas no PHP 7.x ou superior.
 
 ---
 
@@ -619,7 +619,7 @@ foreach($rows as $row) {
 
 ---
 
-## autoload, namespace, composer e projetos modernos
+## autoload, namespace, composer e projetos "modernos"
 
 Ao longo dos anos e suas versões o PHP vêm evoluindo constantemente, principalmente buscando aumentar sua performance, seu conjunto de ferramentas e continuar sendo relevante no mercado profissional de desenvolvimento web.
 

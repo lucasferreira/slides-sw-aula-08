@@ -3,19 +3,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contato</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bem-vindo - Contato</title>
 </head>
 <body>
-  <?php include("header.php"); ?>
-  <form>
-    <fieldset>
-      <div>
-        <label for="">Nome:</label>
-        <input type="text">
-      </div>
-      <button>Enviar</button>
-    </fieldset>
-  </form>
-  <?php include("footer.php"); ?>
+  <?php include("menu.php"); ?>
+  <main>
+    <p>Entre em contato conosco pelo telefone XXXXX</p>
+  </main>
+  <?php include("rodape.php") ?>
 </body>
 </html>
