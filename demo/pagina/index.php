@@ -1,3 +1,4 @@
+<?php require_once "includes/db.php";?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,18 +12,22 @@
     <?php require_once "includes/topo.php";?>
     <main style="padding: 21px;">
       <p><strong>Lista de Cursos Disponíveis:</strong></p>
+      <?php
+      	$query = $db->query("SELECT * FROM cursos");
+      	$rows = $query->fetchAll(PDO::FETCH_ASSOC);
+      ?>
       <ul>
-        <li>Eng. Comp</li>
-        <li>Eng. Software</li>
-        <li>Fake</li>
+        <?php foreach ($rows as $curso): ?>
+        <li><?php echo $curso['nome']; ?> | <a href="excluir_curso.php?id=<?php echo $curso['id']; ?>">Excluir #<?php echo $curso['id']; ?></a></li>
+        <?php endforeach;?>
       </ul>
 
       <br />
-      <form action="?" method="post" style="border-top: 1px solid black; padding-top: 16px;">
+      <form action="cadastrar_curso.php" method="post" style="border-top: 1px solid black; padding-top: 16px;">
         <fieldset>
           <div class="form-group">
             <label for="nomeCurso">Adicionar novo Curso:</label>
-            <input type="text" id="nomeCurso" name="name" class="form-control" />
+            <input type="text" id="nomeCurso" name="nome" class="form-control" />
           </div>
           <button class="btn btn-primary btn-lg">Cadastrar Curso</button>
         </fieldset>
